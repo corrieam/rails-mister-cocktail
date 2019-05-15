@@ -6,24 +6,27 @@
     <h2>Cocktail Details</h2>
   </div>
 
-  <div>
-    <% cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <div class="container-content d-flex">
+    <div>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    </div>
+
+    <div class="container-list w-2">
+      <% @cocktail.doses.each do |dose| %>
+        <p>
+          <%= dose.description %>
+          <%= dose.ingredient.name %>
+          <%= link_to dose_path(dose.id), method: :delete do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+        </p>
+      <% end %>
+
+      <button type="button" class="btn btn-warning"><%= link_to "Add Ingredients and amounts", new_cocktail_dose_path(@cocktail) %></button>
+    </div>
+
   </div>
 
-  <div class="container-list">
-    <% @cocktail.doses.each do |dose| %>
-      <p>
-        <%= dose.description %>
-        <%= dose.ingredient.name %>
-        <%= link_to dose_path(dose.id), method: :delete do %>
-          <i class="far fa-trash-alt"></i>
-        <% end %>
-      </p>
-    <% end %>
-
-    <p class="button"><%= link_to "Add Ingredients and amounts", new_cocktail_dose_path(@cocktail) %></p>
-
-    <p class="button"><%= link_to "Back to list", cocktails_path %></p>
-  </div>
+  <button type="button" class="btn btn-warning"><%= link_to "Back to list", cocktails_path %></button>
 
 </div>
