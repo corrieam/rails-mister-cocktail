@@ -1,11 +1,17 @@
-<h1>Add Ingredients and Amounts</h1>
+<%= render "navbar" %>
 
-<%= simple_form_for [ @cocktail, @dose ] do |f| %>
-
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.button :submit %>
-<% end %>
-
-
+<div class="container w-50">
+  <div class="container-banner d-flex flex-column align-items-center justify-content-center">
+    <h2>Add Ingredients and Amounts</h2>
+  </div>
+  <div class="container-content">
+    <div class="container-form">
+      <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+        <%= f.association :ingredient %>
+        <%= f.input :description %>
+        <%= f.button :submit, "Add!", class: "form-button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 

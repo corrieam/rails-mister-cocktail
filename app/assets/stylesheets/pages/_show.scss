@@ -17,5 +17,19 @@ $mustard: #F39237;
 }
 
 .container-content {
-  height: 400px;
+  height: 350px;
+}
+
+.btn {
+  margin-top: 8px;
+}
+
+.form-btn {
+  border: 1px solid $mustard;
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+.form-btn a {
+  color: $mustard;
 }
