@@ -1,0 +1,25 @@
+$deep_grey: #1E1E1E;
+
+.card-product {
+  overflow: hidden;
+  height: 250px;
+  background: $deep_grey;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 16px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 220px;
+  object-fit: cover;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.card-product a {
+  // color: white;
+}

@@ -5,13 +5,13 @@
   </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100 d-flex justify-content-between align-items-center">
       <li class="nav-item active">
-        <h1> <%= link_to "cocktails!", cocktails_path %></h1>
+        <h1>Mr. Cocktail</h1>
       </li>
       <li class="nav-item">
-        <button type="button" class="btn btn-light"><%= link_to "Create new cocktail", new_cocktail_path %></button>
+        <button type="button" class="btn btn-warning"><%= link_to "Take me home", cocktails_path %></button>
       </li>
     </ul>
   </div>

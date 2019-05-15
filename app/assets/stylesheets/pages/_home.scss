@@ -1,1 +1,39 @@
 // Specific CSS for your home-page
+.banner {
+  height: 500px;
+  color: white;
+  background-image: url('https://res.cloudinary.com/da5feb6qi/image/upload/v1557915751/nupa0gqgiwrowddwounm.jpg');
+}
+
+.banner h1 {
+  color: #F39237;
+  font-size: 60px;
+}
+
+.banner h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 2rem;
+}
+
+button a {
+  color: white;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+@media(max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

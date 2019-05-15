@@ -1,0 +1,17 @@
+$mustard: #F39237;
+
+.container-banner {
+  height: 200px;
+  border-radius: 3px;
+  background-image: url('https://res.cloudinary.com/da5feb6qi/image/upload/v1557915751/nupa0gqgiwrowddwounm.jpg');
+}
+
+.container-list {
+  padding: 32px;
+}
+
+.form-button {
+  border: 1px solid $mustard;
+  border-radius: 3px;
+  color: $mustard;
+}

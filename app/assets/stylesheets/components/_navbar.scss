@@ -1,6 +1,8 @@
+$deep_grey: #1E1E1E;
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: #1E1E1E;
+  background: $deep-grey;
 }
 
 .navbar-lewagon .navbar-collapse {

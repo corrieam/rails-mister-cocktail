@@ -1,19 +1,23 @@
 
-<div class="banner">
-  <h1>cocktails!</h1>
+<div class="banner d-flex flex-column align-items-center justify-content-center">
+  <h1>Mr. Cocktail</h1>
+  <h2>community cocktail recipes</h2>
+  <button type="button" class="btn btn-warning"><%= link_to "Add a cocktail", new_cocktail_path %></button>
 </div>
 
-<div class="container">
-  <div>
+<div class="cards">
     <% @cocktails.each do |cocktail| %>
-    <p> <%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-product">
+          <img src="https://source.unsplash.com/random">
+          <div class="card-product-infos">
+            <h2> <%= cocktail.name %></h2>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  </div>
-
-
-  <p class="button"><%= link_to "Create new cocktail", new_cocktail_path %></p>
-
 </div>
+
 
 
 

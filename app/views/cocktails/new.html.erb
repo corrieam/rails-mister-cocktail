@@ -1,6 +1,17 @@
-<h2>Add a new cocktail!</h2>
+<%= render "navbar" %>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name, label:'Cocktail name' %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container w-50">
+  <div class="container-banner d-flex flex-column align-items-center justify-content-center">
+    <h2>Add a new cocktail!</h2>
+  </div>
+  <div class="container-content">
+    <div class="container-form">
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, label:'Cocktail name' %>
+        <% f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden
+        <%= f.button :submit, "Create!", class: "form-button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
